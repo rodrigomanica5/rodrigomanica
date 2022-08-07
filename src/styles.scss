@@ -3,14 +3,9 @@
     src: url(/public/assets/fonts/CORBEL.TTF);
 }
 
-// @font-face {
-//     font-family: Corbel;
-//     src: url(/public/assets/fonts/CorbelBold.ttf);
-// }
-
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
-
 $borderGreen: #8fd18a;
+$grey: #323232;
+$white: #ffffff;
 
 
 * {
@@ -31,12 +26,13 @@ $borderGreen: #8fd18a;
     position: fixed;
     width: 100%;
     height: 10vh;
-    color: white;
+    color: $white;
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 18px;
     backdrop-filter: blur(2px);
+    transition: all 0.5s;
 
     .navLogo {
         width: 45%;
@@ -44,7 +40,7 @@ $borderGreen: #8fd18a;
         padding-left: 20px;
 
         p a {
-            color: white;
+            color: $white;
             text-decoration: none;
         }
     }
@@ -59,11 +55,16 @@ $borderGreen: #8fd18a;
             list-style-type: none;
             
             a {
-                color: white;
+                color: $white;
                 text-decoration: none;
             }
         }
     }
+}
+
+.navChange {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.5s;
 }
 
 .titleContainer {
@@ -78,7 +79,7 @@ $borderGreen: #8fd18a;
         font-weight: 500;
         width: 33%;
         font-size: 50px;
-        color: white;
+        color: $white;
         border: 4px solid $borderGreen;
         text-align: center;
         padding: 20px 15px;
@@ -92,7 +93,7 @@ $borderGreen: #8fd18a;
     p {
         font-family: Corbel;
         width: 40%;
-        color: white;
+        color: $white;
         text-align: center;
         padding-top: 10px;
         font-size: 20px;
@@ -102,20 +103,19 @@ $borderGreen: #8fd18a;
         padding: 10px 40px;
         margin-top: 50px;
         text-transform: uppercase;
-        color: #323232;
+        color: $grey;
         font-family: Corbel;
-        // font-weight: bold;
         text-decoration: none;
         border-radius: 25px;
-        border: 2px solid #323232;
+        border: 2px solid $grey;
         background: none;
     }
 
     a:hover {
         border-radius: 25px;
-        border: 2px solid #323232;
+        border: 2px solid $white;
         background: none;
-        color: white;
+        color: $white;
         transition: all 0.5s;
     }
 }
@@ -123,17 +123,18 @@ $borderGreen: #8fd18a;
 // -------------------------
 
 .aboutMe {
-    padding-top: 120px;
     height: 80vh;
     display: flex;
     flex-direction: row;
 
     .detailContainer {
+
         width: 66.66%;
         display: flex;
         flex-direction: column;
         padding-left: 10.66%;
         justify-content: start;
+        align-self: center;
 
         .aboutInfo {
             height: 30vh;
@@ -150,9 +151,9 @@ $borderGreen: #8fd18a;
         .btn {
             height: 6vh;
             width: 25%;
-            background-color: #323232;
+            background-color: $grey;
             border: none;
-            color: white;
+            color: $white;
             margin-left: 22px;
             margin-top: 20px;
             cursor: pointer;
@@ -161,7 +162,9 @@ $borderGreen: #8fd18a;
 
     .imgContainer {
         width: 33.33%;
-        border: 1px solid black;
+        background-image: url('/public/assets/images/4a.png');
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -178,7 +181,7 @@ $borderGreen: #8fd18a;
 .skillsContainer {
     width: 100%;
     height: 50vh;
-    background-color: #323232;
+    background-color: $grey;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -187,7 +190,10 @@ $borderGreen: #8fd18a;
     div {
         height: 35vh;
         width: 16.66%;
-        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -196,7 +202,16 @@ $borderGreen: #8fd18a;
 .projectsContainer {
 
     padding-top: 120px;
-    
+
+    h2 {
+        @extend .sectionTitle;
+        margin-left: 10.66%;
+    }
+}
+
+.contactSection {
+    padding-top: 120px;
+
     h2 {
         @extend .sectionTitle;
         margin-left: 10.66%;

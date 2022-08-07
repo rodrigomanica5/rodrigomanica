@@ -19,9 +19,7 @@ function About() {
           <button className='btn' onClick={() => console.log('CV descargado')}>DOWNLOAD CV</button>
         </div>
 
-        <div className='imgContainer'>
-          <img src='' alt=''></img>
-        </div>
+        <div className='imgContainer'></div>
       </div>
       <Skills />
     </>

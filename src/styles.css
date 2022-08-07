@@ -22,7 +22,7 @@
   position: fixed;
   width: 100%;
   height: 10vh;
-  color: white;
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +36,8 @@
   font-size: 18px;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .nav .navLogo {
@@ -45,7 +47,7 @@
 }
 
 .nav .navLogo p a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -67,8 +69,14 @@
 }
 
 .nav .navLinks li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+}
+
+.navChange {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .titleContainer {
@@ -93,7 +101,7 @@
   font-weight: 500;
   width: 33%;
   font-size: 50px;
-  color: white;
+  color: #ffffff;
   border: 4px solid #8fd18a;
   text-align: center;
   padding: 20px 15px;
@@ -107,7 +115,7 @@
 .titleContainer p {
   font-family: Corbel;
   width: 40%;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding-top: 10px;
   font-size: 20px;
@@ -127,15 +135,14 @@
 
 .titleContainer a:hover {
   border-radius: 25px;
-  border: 2px solid #323232;
+  border: 2px solid #ffffff;
   background: none;
-  color: white;
+  color: #ffffff;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .aboutMe {
-  padding-top: 120px;
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,6 +166,8 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .aboutMe .detailContainer .aboutInfo {
@@ -184,7 +193,7 @@
   width: 25%;
   background-color: #323232;
   border: none;
-  color: white;
+  color: #ffffff;
   margin-left: 22px;
   margin-top: 20px;
   cursor: pointer;
@@ -192,10 +201,12 @@
 
 .aboutMe .imgContainer {
   width: 33.33%;
-  border: 1px solid black;
+  background-image: url("/public/assets/images/4a.png");
+  background-position: center;
+  background-size: cover;
 }
 
-.sectionTitle, .projectsContainer h2 {
+.sectionTitle, .projectsContainer h2, .contactSection h2 {
   width: 84.34%;
   text-transform: uppercase;
   border-left: 4px solid #8fd18a;
@@ -227,7 +238,19 @@
 .skillsContainer div {
   height: 35vh;
   width: 16.66%;
-  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projectsContainer {
@@ -235,6 +258,14 @@
 }
 
 .projectsContainer h2 {
+  margin-left: 10.66%;
+}
+
+.contactSection {
+  padding-top: 120px;
+}
+
+.contactSection h2 {
   margin-left: 10.66%;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,9 @@
 import Header from './components/Header';
 import About from './components/About';
 import ItemListContainer from './components/ItemListContainer';
-import Footer from './components/Footer';
 import { BrowserRouter } from 'react-router-dom'
 import MyProvider from './navContext'
+import Contact from './components/Contact';
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <About />
         <ItemListContainer />
-        <Footer />
+        <Contact/>
       </MyProvider>
     </BrowserRouter>
   );
