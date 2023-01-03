@@ -2,7 +2,7 @@ import Header from './components/Header';
 import About from './components/About';
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter } from 'react-router-dom'
-import MyProvider from './navContext'
+import MyProvider from './context/navContext'
 import Contact from './components/Contact';
 
 function App() {

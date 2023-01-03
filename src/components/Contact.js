@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { navContext } from '../navContext'
+import { navContext } from '../context/navContext'
 
 function Contact() {
 
