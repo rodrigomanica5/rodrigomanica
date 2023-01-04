@@ -3,6 +3,16 @@
   src: url(/public/assets/fonts/CORBEL.TTF);
 }
 
+@font-face {
+  font-family: GillSans;
+  src: url(/public/assets/fonts/GillSans.ttf);
+}
+
+@font-face {
+  font-family: GillSansMedium;
+  src: url(/public/assets/fonts/GillSansMedium.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -100,7 +110,7 @@
 .titleContainer h1 {
   font-family: Corbel;
   font-weight: 500;
-  width: 33%;
+  width: 43%;
   font-size: 50px;
   color: #ffffff;
   border: 4px solid #8fd18a;
@@ -144,7 +154,8 @@
 }
 
 .aboutMe {
-  height: 80vh;
+  height: auto;
+  padding: 120px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +183,7 @@
 }
 
 .aboutMe .detailContainer .aboutInfo {
-  height: 30vh;
+  height: 73vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,9 +200,18 @@
   padding-bottom: 10px;
 }
 
+.aboutMe .detailContainer .aboutInfo p {
+  font-family: GillSans;
+}
+
+.aboutMe .detailContainer .aboutInfo .aboutInfoSpan {
+  font-weight: bold;
+}
+
 .aboutMe .detailContainer .btn {
-  height: 6vh;
   width: 25%;
+  padding: 1.5vh 0vh;
+  font-family: GillSans;
   background-color: #323232;
   border: none;
   margin-left: 22px;
@@ -199,7 +219,6 @@
   color: #ffffff;
   text-decoration: none;
   text-align: center;
-  padding-top: 10px;
   cursor: pointer;
 }
 
@@ -289,7 +308,8 @@
 }
 
 .cards img {
-  height: 45vh;
+  height: 41vh;
+  margin: 0px 2px;
 }
 
 .cards img:hover {

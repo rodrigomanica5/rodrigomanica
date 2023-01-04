@@ -3,6 +3,16 @@
     src: url(/public/assets/fonts/CORBEL.TTF);
 }
 
+@font-face {
+    font-family: GillSans;
+    src: url(/public/assets/fonts/GillSans.ttf);
+}
+
+@font-face {
+    font-family: GillSansMedium;
+    src: url(/public/assets/fonts/GillSansMedium.ttf);
+}
+
 $borderGreen: #8fd18a;
 $grey: #323232;
 $white: #ffffff;
@@ -78,7 +88,7 @@ $white: #ffffff;
     h1 {
         font-family: Corbel;
         font-weight: 500;
-        width: 33%;
+        width: 43%;
         font-size: 50px;
         color: $white;
         border: 4px solid $borderGreen;
@@ -124,7 +134,8 @@ $white: #ffffff;
 // -------------------------
 
 .aboutMe {
-    height: 80vh;
+    height: auto;
+    padding: 120px 0px;
     display: flex;
     flex-direction: row;
 
@@ -138,7 +149,7 @@ $white: #ffffff;
         align-self: center;
 
         .aboutInfo {
-            height: 30vh;
+            height: 73vh;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -147,11 +158,20 @@ $white: #ffffff;
             padding-left: 22px;
             padding-top: 10px;
             padding-bottom: 10px;
+
+            p {
+                font-family: GillSans;
+            }
+
+            .aboutInfoSpan {
+                font-weight: bold;
+            }
         }
 
         .btn {
-            height: 6vh;
             width: 25%;
+            padding: 1.5vh 0vh;
+            font-family: GillSans;
             background-color: $grey;
             border: none;
             margin-left: 22px;
@@ -159,7 +179,6 @@ $white: #ffffff;
             color: $white;
             text-decoration: none;
             text-align: center;
-            padding-top: 10px;
             cursor: pointer;
 
         }
@@ -233,7 +252,8 @@ $white: #ffffff;
     cursor: pointer;
 
     img {
-        height: 45vh;
+        height: 41vh;
+        margin: 0px 2px;
     }
 
     img:hover {
