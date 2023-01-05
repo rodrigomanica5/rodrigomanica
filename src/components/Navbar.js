@@ -6,7 +6,7 @@ function Navbar() {
 
     const [nav, setNav] = useState(false);
 
-    const { header, about, projects, contact, scrollToSection } = useContext(navContext)
+    const { header, about, projects, contact, scrollToSection, width } = useContext(navContext)
 
     useEffect(() => {
 
@@ -28,9 +28,12 @@ function Navbar() {
 
     return (
         <nav className={`nav ${nav ? 'navChange' : ''}`}>
-            <div className='navLogo'>
-                <p><Link onClick={() => scrollToSection(header)} to='/'>RODRIGO MANICA</Link></p>
-            </div>
+            {
+                !width &&
+                <div className='navLogo'>
+                    <p><Link onClick={() => scrollToSection(header)} to='/'>RODRIGO MANICA</Link></p>
+                </div>
+            }
             <ul className='navLinks'>
                 <li><Link onClick={() => scrollToSection(about)} to='/about'>About</Link></li>
                 <li><Link onClick={() => scrollToSection(projects)} to='/projects'>Projects</Link></li>

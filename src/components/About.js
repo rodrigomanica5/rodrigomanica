@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
 import { navContext } from '../context/navContext'
 import Skills from './Skills'
 
 function About() {
 
-  const { about } = useContext(navContext)
+  const { about, width } = useContext(navContext)
 
   return (
     <>
@@ -21,7 +20,9 @@ function About() {
           <a className='btn' href='https://drive.google.com/file/d/1RLGbbMTLw94sveqZhqj8aevARKU5QLjE/view' target="_blank">MY RESUME</a>
         </div>
 
-        <div className='imgContainer'></div>
+        {
+          !width && <div className='imgContainer'></div>
+        }
       </div>
       <Skills />
     </>

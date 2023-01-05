@@ -153,6 +153,16 @@
   transition: all 0.5s;
 }
 
+.sectionTitle, .featuredWork h2, .contactMe .contactContainer h2 {
+  width: 84.34%;
+  text-transform: uppercase;
+  border-left: 4px solid #8fd18a;
+  font-size: 40px;
+  padding-left: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .aboutMe {
   height: auto;
   padding: 120px 0px;
@@ -226,17 +236,8 @@
   width: 33.33%;
   background-image: url("/public/assets/images/profile.png");
   background-position: center;
-  background-size: cover;
-}
-
-.sectionTitle, .projectsContainer h2, .contactSection h2 {
-  width: 84.34%;
-  text-transform: uppercase;
-  border-left: 4px solid #8fd18a;
-  font-size: 40px;
-  padding-left: 22px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .skillsContainer {
@@ -276,11 +277,11 @@
           align-items: center;
 }
 
-.projectsContainer {
+.featuredWork {
   padding-top: 120px;
 }
 
-.projectsContainer h2 {
+.featuredWork h2 {
   margin-left: 10.66%;
   margin-bottom: 30px;
 }
@@ -302,17 +303,17 @@
           justify-content: center;
 }
 
-.cards {
+.cardsContainer .cards {
   overflow: hidden;
   cursor: pointer;
 }
 
-.cards img {
+.cardsContainer .cards img {
   height: 41vh;
   margin: 0px 2px;
 }
 
-.cards img:hover {
+.cardsContainer .cards img:hover {
   -webkit-filter: blur(2px);
           filter: blur(2px);
   -webkit-transform: scale(1.1);
@@ -321,34 +322,213 @@
   transition: all 0.5s ease-in-out;
 }
 
-.projectView {
+.contactMe {
+  padding-top: 120px;
+  padding-bottom: 8vh;
+}
+
+.contactMe .contactContainer {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  padding-left: 10.66%;
+}
+
+.contactMe .contactContainer div {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.projectView img {
-  height: 130vh;
-  width: 130vh;
-  position: absolute;
+.contactMe .contactContainer div .contactDetails {
+  width: 45%;
+  height: 17vh;
+  padding-left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contactMe .contactContainer div .contactDetails p {
+  font-family: GillSansMedium;
+  font-size: 20px;
+}
+
+.contactMe .contactContainer div .contactDetails p .emailLabel {
+  font-weight: bold;
+}
+
+.contactMe .contactContainer div .contactDetails p .emailAddress {
+  text-decoration: underline;
+}
+
+.contactMe .contactContainer div .contactLocation {
+  width: 55%;
   height: auto;
 }
 
-.contactSection {
-  padding-top: 120px;
+.contactMe .contactContainer div .contactLocation iframe {
+  border: 0;
 }
 
-.contactSection h2 {
-  margin-left: 10.66%;
+@media only screen and (max-width: 390px) {
+  .nav {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav .navLinks {
+    width: 80%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .titleContainer h1 {
+    width: 80%;
+    font-size: 50px;
+  }
+  .titleContainer p {
+    width: 60%;
+  }
+  .sectionTitle, .featuredWork h2, .contactMe .contactContainer h2 {
+    font-size: 30px;
+  }
+  .aboutMe {
+    height: auto;
+    padding: 80px 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutMe .detailContainer {
+    width: 90%;
+    padding-left: 0;
+  }
+  .aboutMe .detailContainer .aboutInfo {
+    width: 100%;
+    height: auto;
+  }
+  .aboutMe .detailContainer .btn {
+    width: 45%;
+    padding: 1.8vh 0vh;
+  }
+  .skillsContainer {
+    height: 30vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .featuredWork {
+    width: 100%;
+    padding-top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featuredWork .projectsContainer {
+    width: 90%;
+  }
+  .featuredWork .projectsContainer h2 {
+    margin-left: 0px;
+  }
+  .featuredWork .projectsContainer .cardsContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featuredWork .projectsContainer .cardsContainer .cards {
+    margin: 7px 0px;
+  }
+  .featuredWork .projectsContainer .cardsContainer .cards img {
+    height: 28vh;
+    border-radius: 15px;
+  }
+  .featuredWork .projectsContainer .cardsContainer .cards img:hover {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .contactMe {
+    height: auto;
+    width: 100%;
+    padding-top: 73px;
+    padding-bottom: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contactMe .contactContainer {
+    width: 90%;
+    padding-left: 0;
+  }
+  .contactMe .contactContainer div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactMe .contactContainer div .contactDetails {
+    width: 100%;
+    height: 17vh;
+    padding-left: 22px;
+  }
+  .contactMe .contactContainer div .contactDetails p {
+    font-family: GillSansMedium;
+    font-size: 20px;
+  }
+  .contactMe .contactContainer div .contactDetails p .emailLabel {
+    font-weight: bold;
+  }
+  .contactMe .contactContainer div .contactDetails p .emailAddress {
+    text-decoration: underline;
+  }
+  .contactMe .contactContainer div .contactDetails div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contactMe .contactContainer div .contactLocation {
+    width: auto;
+    height: auto;
+  }
+  .contactMe .contactContainer div .contactLocation iframe {
+    width: 100%;
+    border-radius: 15px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

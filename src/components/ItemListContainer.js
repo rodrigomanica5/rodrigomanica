@@ -6,21 +6,23 @@ function ItemListContainer() {
 
   const [items, setItems] = useState([])
 
-  const {projects} = useContext(navContext)
+  const { projects } = useContext(navContext)
 
   useEffect(() => {
 
     const promise = fetch("/assets/projects/projectList.js");
 
     promise.then(data => data.json())
-    .then(res => setItems(res))
+      .then(res => setItems(res))
 
   }, [])
 
   return (
-    <div ref={projects} className='projectsContainer'>
-      <h2>featured work</h2>
-      <ItemList items={items}/>
+    <div ref={projects} className='featuredWork'>
+      <div className='projectsContainer'>
+        <h2>featured work</h2>
+        <ItemList items={items} />
+      </div>
     </div>
   )
 }
